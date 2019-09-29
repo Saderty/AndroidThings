@@ -1,7 +1,10 @@
 package com.saderty.androidthings;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.SeekBar;
 import android.widget.TextView;
@@ -10,9 +13,11 @@ public class Furniture extends AppCompatActivity {
     CheckBox m1, m2, m3, m4, m5, m6, m7, m8, m9, m10;
     TextView mtv1, mtv2;
     SeekBar t1, t2, t3, t4, t5, t6, t7, t8, t9, t10;
+    Button img;
 
     Double[] price = {3900., 1992., 1713., 4654., 7300., 3090., 2250., 706., 1785., 4990.,};
-    Double res = 0.;
+    Double[] p = new Double[price.length];
+    //Double res = 0.;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,15 +49,17 @@ public class Furniture extends AppCompatActivity {
         t9 = findViewById(R.id.t9);
         t10 = findViewById(R.id.t10);
 
+        img = findViewById(R.id.btn_img);
+
         mtv1.setText(FloorActivity.floor);
 
-        if (FloorActivity.floor.equals("Стандартный")) {
+        if (FloorActivity.floor == 2) {
             m4.setEnabled(false);
             t4.setEnabled(false);
             m5.setEnabled(false);
             t5.setEnabled(false);
         }
-        if (FloorActivity.floor.equals("Экономичный")) {
+        if (FloorActivity.floor == 3) {
             m4.setEnabled(false);
             t4.setEnabled(false);
             m5.setEnabled(false);
@@ -64,7 +71,7 @@ public class Furniture extends AppCompatActivity {
             m10.setEnabled(false);
             t10.setEnabled(false);
         }
-        if (FloorActivity.floor.equals("Сигнализация")) {
+        if (FloorActivity.floor == 4) {
             m4.setEnabled(false);
             t4.setEnabled(false);
             m5.setEnabled(false);
@@ -77,11 +84,19 @@ public class Furniture extends AppCompatActivity {
             t10.setEnabled(false);
         }
 
+        img.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Furniture.this, DisplayActivity.class);
+                startActivity(intent);
+            }
+        });
+
         t1.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                res += price[0] * t1.getProgress();
-                mtv2.setText(res + "Р");
+                p[0] = price[0] * t1.getProgress();
+                mtv2.setText(getSum());
             }
 
             @Override
@@ -97,8 +112,8 @@ public class Furniture extends AppCompatActivity {
         t2.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                res += price[1] * t2.getProgress();
-                mtv2.setText(res + "Р");
+                p[1] = price[1] * t2.getProgress();
+                mtv2.setText(getSum());
             }
 
             @Override
@@ -114,8 +129,8 @@ public class Furniture extends AppCompatActivity {
         t3.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                res += price[2] * t3.getProgress();
-                mtv2.setText(res + "Р");
+                p[2] = price[2] * t3.getProgress();
+                mtv2.setText(getSum());
             }
 
             @Override
@@ -131,8 +146,8 @@ public class Furniture extends AppCompatActivity {
         t4.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                res += price[3] * t4.getProgress();
-                mtv2.setText(res + "Р");
+                p[3] = price[3] * t4.getProgress();
+                mtv2.setText(getSum());
             }
 
             @Override
@@ -148,8 +163,8 @@ public class Furniture extends AppCompatActivity {
         t5.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                res += price[4] * t5.getProgress();
-                mtv2.setText(res + "Р");
+                p[4] = price[4] * t5.getProgress();
+                mtv2.setText(getSum());
             }
 
             @Override
@@ -165,8 +180,8 @@ public class Furniture extends AppCompatActivity {
         t6.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                res += price[5] * t6.getProgress();
-                mtv2.setText(res + "Р");
+                p[5] = price[5] * t6.getProgress();
+                mtv2.setText(getSum());
             }
 
             @Override
@@ -182,8 +197,8 @@ public class Furniture extends AppCompatActivity {
         t7.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                res += price[6] * t7.getProgress();
-                mtv2.setText(res + "Р");
+                p[6] = price[6] * t7.getProgress();
+                mtv2.setText(getSum());
             }
 
             @Override
@@ -199,8 +214,8 @@ public class Furniture extends AppCompatActivity {
         t8.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                res += price[7] * t8.getProgress();
-                mtv2.setText(res + "Р");
+                p[7] = price[7] * t8.getProgress();
+                mtv2.setText(getSum());
             }
 
             @Override
@@ -216,8 +231,8 @@ public class Furniture extends AppCompatActivity {
         t9.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                res += price[8] * t9.getProgress();
-                mtv2.setText(res + "Р");
+                p[8] = price[8] * t9.getProgress();
+                mtv2.setText(getSum());
             }
 
             @Override
@@ -233,8 +248,8 @@ public class Furniture extends AppCompatActivity {
         t10.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                res += price[9] * t10.getProgress();
-                mtv2.setText(res + "Р");
+                p[9] = price[9] * t10.getProgress();
+                mtv2.setText(getSum());
             }
 
             @Override
@@ -247,5 +262,16 @@ public class Furniture extends AppCompatActivity {
 
             }
         });
+    }
+
+    String getSum() {
+        Double sum = 0.;
+
+        for (int i = 0; i < p.length; i++) {
+            if (p[i] != null) {
+                sum += p[i];
+            }
+        }
+        return sum + "Р";
     }
 }

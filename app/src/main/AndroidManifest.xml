@@ -18,10 +18,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Surface" />
-        <activity android:name=".Surf" />
         <activity android:name=".FloorActivity"/>
         <activity android:name=".Furniture"/>
+        <activity android:name=".DisplayActivity"/>
     </application>
 
 </manifest>

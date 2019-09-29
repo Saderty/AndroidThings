@@ -11,7 +11,8 @@ public class FloorActivity extends AppCompatActivity {
     CheckBox cb11, cb12, cb13, cb21, cb22, cb23, cb24;
     Button floorBtn;
 
-    static String floor;
+    static String floors[]={"Однокомнатная","Двухкомнатная","Трёхкомнатная"};
+    static int floor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,13 +29,17 @@ public class FloorActivity extends AppCompatActivity {
 
         floorBtn = findViewById(R.id.floorBtn);
 
+        cb11.setText(floors[0]);
+        cb12.setText(floors[1]);
+        cb13.setText(floors[2]);
+
         floorBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (cb21.isChecked())floor=cb21.getText().toString();
-                if (cb22.isChecked())floor=cb22.getText().toString();
-                if (cb23.isChecked())floor=cb23.getText().toString();
-                if (cb24.isChecked())floor=cb24.getText().toString();
+                if (cb21.isChecked())floor=1;
+                if (cb22.isChecked())floor=2;
+                if (cb23.isChecked())floor=3;
+                if (cb24.isChecked())floor=4;
 
                 Intent intent = new Intent(FloorActivity.this, Furniture.class);
                 startActivity(intent);
