@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="40dp"
+        android:text="Выбор датчиков"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/m1"
+        android:layout_width="200dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="8dp"
+        android:text="Датчик утечки газа"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        tools:layout_editor_absoluteX="40dp" />
+
+    <CheckBox
+        android:id="@+id/m2"
+        android:layout_width="200dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="8dp"
+        android:text="Датчик протечки воды"
+        app:layout_constraintTop_toBottomOf="@+id/m1"
+        tools:layout_editor_absoluteX="40dp" />
+
+    <CheckBox
+        android:id="@+id/m3"
+        android:layout_width="200dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="8dp"
+        android:text="Пожарная сигнализация"
+        app:layout_constraintTop_toBottomOf="@+id/m2"
+        tools:layout_editor_absoluteX="40dp" />
+
+    <CheckBox
+        android:id="@+id/m4"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Открытие/Закрытие окон"
+        app:layout_constraintTop_toBottomOf="@+id/m3"
+        tools:layout_editor_absoluteX="40dp" />
+
+    <CheckBox
+        android:id="@+id/m5"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Зашторивание окон"
+        app:layout_constraintTop_toBottomOf="@+id/m4"
+        tools:layout_editor_absoluteX="40dp" />
+
+    <CheckBox
+        android:id="@+id/m6"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Умный выключатель"
+        app:layout_constraintTop_toBottomOf="@+id/m5"
+        tools:layout_editor_absoluteX="40dp" />
+
+    <CheckBox
+        android:id="@+id/m7"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Умная розетка"
+        app:layout_constraintTop_toBottomOf="@+id/m6"
+        tools:layout_editor_absoluteX="40dp" />
+
+    <CheckBox
+        android:id="@+id/m8"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Датчик движение"
+        app:layout_constraintTop_toBottomOf="@+id/m7"
+        tools:layout_editor_absoluteX="40dp" />
+
+    <CheckBox
+        android:id="@+id/m9"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Пульт охраны"
+        app:layout_constraintTop_toBottomOf="@+id/m8"
+        tools:layout_editor_absoluteX="40dp" />
+
+    <CheckBox
+        android:id="@+id/m10"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Стеновая панель, приложение или пульт"
+        app:layout_constraintTop_toBottomOf="@+id/m9"
+        tools:layout_editor_absoluteX="40dp" />
+
+    <TextView
+        android:id="@+id/mtv1"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/mtv2"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:hint="Примерная стоимость"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/m10" />
+
+    <SeekBar
+        android:max="10"
+        android:progress="0"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:id="@+id/t1"
+        android:layout_width="150dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@+id/m1"
+        app:layout_constraintTop_toBottomOf="@+id/mtv1" />
+
+    <SeekBar
+        android:max="10"
+        android:progress="0"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:id="@+id/t2"
+        android:layout_width="150dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/m2"
+        app:layout_constraintTop_toBottomOf="@+id/t1" />
+
+    <SeekBar
+        android:max="10"
+        android:progress="0"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:id="@+id/t3"
+        android:layout_width="150dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/m3"
+        app:layout_constraintTop_toBottomOf="@+id/t2" />
+
+    <SeekBar
+        android:max="10"
+        android:progress="0"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:id="@+id/t4"
+        android:layout_width="150dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/m4"
+        app:layout_constraintTop_toBottomOf="@+id/t3" />
+
+    <SeekBar
+        android:max="10"
+        android:progress="0"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:id="@+id/t5"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/m5"
+        app:layout_constraintTop_toBottomOf="@+id/t4" />
+
+    <SeekBar
+        android:max="10"
+        android:progress="0"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:id="@+id/t6"
+        android:layout_width="150dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/m6"
+        app:layout_constraintTop_toBottomOf="@+id/t5" />
+
+    <SeekBar
+        android:max="10"
+        android:progress="0"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:id="@+id/t7"
+        android:layout_width="150dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/m7"
+        app:layout_constraintTop_toBottomOf="@+id/t6" />
+
+    <SeekBar
+        android:max="10"
+        android:progress="0"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:id="@+id/t8"
+        android:layout_width="150dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/m8"
+        app:layout_constraintTop_toBottomOf="@+id/t7" />
+
+    <SeekBar
+        android:max="10"
+        android:progress="0"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:id="@+id/t9"
+        android:layout_width="150dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/m9"
+        app:layout_constraintTop_toBottomOf="@+id/t8" />
+
+    <SeekBar
+        android:max="10"
+        android:progress="0"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:id="@+id/t10"
+        android:layout_width="150dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/m10"
+        app:layout_constraintTop_toBottomOf="@+id/t9" />
+
+</android.support.constraint.ConstraintLayout>

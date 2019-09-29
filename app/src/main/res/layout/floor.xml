@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <CheckBox
+        android:id="@+id/cb11"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Однокомнатная"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        tools:layout_editor_absoluteX="40dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="40dp"
+        android:text="Количество комнат"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/cb12"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Двухкомнатная"
+        app:layout_constraintTop_toBottomOf="@+id/cb11"
+        tools:layout_editor_absoluteX="40dp" />
+
+    <CheckBox
+        android:id="@+id/cb13"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Трёхкомнатная"
+        app:layout_constraintTop_toBottomOf="@+id/cb12"
+        tools:layout_editor_absoluteX="40dp" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="108dp"
+        android:ems="10"
+        android:hint="Площадь"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/cb12"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Выбор пакета"
+        app:layout_constraintTop_toBottomOf="@+id/cb13"
+        tools:layout_editor_absoluteX="40dp" />
+
+    <CheckBox
+        android:id="@+id/cb21"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Полный"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        tools:layout_editor_absoluteX="40dp" />
+
+    <CheckBox
+        android:id="@+id/cb22"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Стандартный"
+        app:layout_constraintTop_toBottomOf="@+id/cb21"
+        tools:layout_editor_absoluteX="40dp" />
+
+    <CheckBox
+        android:id="@+id/cb23"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Экономичный"
+        app:layout_constraintTop_toBottomOf="@+id/cb22"
+        tools:layout_editor_absoluteX="40dp" />
+
+    <CheckBox
+        android:id="@+id/cb24"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Сигнализация"
+        app:layout_constraintTop_toBottomOf="@+id/cb23"
+        tools:layout_editor_absoluteX="40dp" />
+
+    <Button
+        android:id="@+id/floorBtn"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Подтвердить"
+        app:layout_constraintTop_toBottomOf="@+id/cb24"
+        tools:layout_editor_absoluteX="40dp" />
+</android.support.constraint.ConstraintLayout>
